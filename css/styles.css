@@ -197,7 +197,7 @@ img {
 /* Main format */
 /* Hero/Section 1 Format*/
 .hero-section {
-  background-image: linear-gradient(rgba(46, 47, 66, 0.70),rgba(46, 47, 66, 0.70)), url(/images/hero.jpg);
+  background-image: url(../images/hero.jpg), linear-gradient(rgba(46, 47, 66, 0.70),rgba(46, 47, 66, 0.70)),;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -780,3 +780,14 @@ img {
   margin: 0;
 }
 
+@media screen and (min-width: 428px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1157px) {
+
+}
+
+@media (min-width: 1158px) {
+
+}
