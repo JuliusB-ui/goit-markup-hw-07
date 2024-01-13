@@ -14,13 +14,13 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/styles.css"/>
+    <link rel="stylesheet" href="./css/stylex.css"/>
 </head>
 <body>
     <header class="header">
         <div class="container">
             <nav class="nav">
-                <a href="/index.html" class="link">Web<span class="logo-head">Studio</span></a>
+                <a href="/index.html" class="link logo">Web<span class="logo-head">Studio</span></a>
                 <ul class="list">
                     <li class="list-item active-nav"><a href="./index.html" class="active-link link">Studio</a></li>
                     <li class="list-item"><a href="./portfolio.html" class="link">Portfolio</a></li>
@@ -37,6 +37,11 @@
                     </li>
                 </ul>
             </address>
+            <button class="js-open-menu menu-toggle" aria-expanded="true" aria-controls="mobile-menu" type="button">
+                <svg width="32" height="22" class="hamburger-open">
+                    <use href="./images/icons.svg#hamburger"/>
+                </svg>
+            </button>
         </div>
     </header>
     <main class="main">
@@ -366,7 +371,7 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal-window">
-            <button class="modal-close" type="button" data-modal-close>
+            <button class="close" type="button" data-modal-close>
                 <svg width="8" height="8" class="close-icon">
                     <use href="./images/icons.svg#cross"/>
                 </svg>
@@ -419,6 +424,63 @@
             </form>
         </div>
     </div>
+    <div class="menu-container js-menu-container is-open" id="mobile-menu">
+        <button class="js-close-menu close" type="button">
+            <svg width="8" height="8" class="close-icon">
+                <use href="./images/icons.svg#cross"/>
+            </svg>
+        </button>
+        <div class="menu">
+            <ul class="list navlist">
+                <li class="list-item active-nav"><a href="./index.html" class="active-link link">Studio</a></li>
+                <li class="list-item"><a href="./portfolio.html" class="link">Portfolio</a></li>
+                <li class="list-item"><a href="" class="link">Contacts</a></li>
+            </ul>
+        <address class="menu-contact">
+            <ul class="list contactlist">
+                <li class="list-item">
+                    <a href="tel:+110001111111" class="link">+11 (000) 111-11-11</a>
+                </li>
+                <li class="list-item">
+                    <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
+                </li>
+                <li>
+                    <ul class="socmed-footer">
+                        <li class="socmed-footer-list">
+                            <a href="" class="socmed-footer-link">
+                                <svg width="24" height="24" class="footer-icons">
+                                    <use href="./images/icons.svg#instagram"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="socmed-footer-list">
+                            <a href="" class="socmed-footer-link">
+                                <svg width="24" height="24" class="footer-icons">
+                                    <use href="./images/icons.svg#twitter"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="socmed-footer-list">
+                            <a href="" class="socmed-footer-link">
+                                <svg width="24" height="24" class="footer-icons">
+                                    <use href="./images/icons.svg#facebook"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="socmed-footer-list">
+                            <a href="" class="socmed-footer-link">
+                                <svg width="24" height="24" class="footer-icons">
+                                    <use href="./images/icons.svg#linkedin"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </address>
+        </div>
+    </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>
