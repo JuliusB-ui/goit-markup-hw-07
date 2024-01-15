@@ -80,7 +80,6 @@ position: absolute;
 /* TEXT FORMATS*/
 /* H2 */
 .section-title,
-.navlist,
 .contactlist .list-item:first-child {
   font-size: 36px;
   font-weight: 700;

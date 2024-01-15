@@ -66,8 +66,8 @@ body {
 .footer .link:active,
 .footer .link:hover,
 .footer .link:focus,
-.menu .link:hover,
-.menu .link:focus {
+.menu-navlist .list-item .link:focus,
+.menu-navlist .list-item .link:hover {
     color: var(--ocean);
 }
 
@@ -156,6 +156,12 @@ img {
     letter-spacing: 0.48px;
 }
 
+.menu-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 /* MEDIA CHANGE IN HEADER */
 @media screen and (max-width: 767px) {
     .header .list {
@@ -163,7 +169,7 @@ img {
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1157px) {
-    .menu-toggle, .header .nav .list {
+    .menu-toggle, .header .nav .list, .menu-container {
         display: none;
     }
     
@@ -180,7 +186,6 @@ img {
         gap: 12px;
     }
 }
-
 @media screen and (min-width: 1158px) {
     .menu-toggle, .separate-nav {
         display: none;
@@ -216,4 +221,107 @@ img {
         flex-direction: row;
         gap: 40px;
     }
+}
+
+
+.menu-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(100%);
+    z-index: 200;
+}
+.menu-container.is-open {
+    transform: translateX(0%);
+}
+
+.close {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close:hover,
+.close:focus {
+    background-color: var(--ocean);
+    border: none;
+}
+
+.close-icon {
+    fill:var(--navy);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close:hover .close-icon,
+.close:focus .close-icon {
+    fill:#ffffff;
+}
+
+.menu {
+    padding: 80px 35px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-navlist .list{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.menu-navlist .list-item .link {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+    color: var(--navy);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-separator {
+    position: absolute;
+    bottom: 40px;
+    gap: 48px;
+    display: flex;
+    flex-direction: column;
+}
+
+.socmed {
+    display: flex;
+    list-style: none;
+}
+
+.contactlist{
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.email {
+    color: var(--slate);
+}
+
+.tel {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+    color: var(--iris);
 }

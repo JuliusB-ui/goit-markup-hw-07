@@ -44,7 +44,7 @@
                     </li>
                 </ul>
             </address>
-            <button class="js-open-menu menu-toggle" aria-expanded="true" aria-controls="mobile-menu" type="button">
+            <button class="js-open-menu menu-toggle" aria-expanded="true" aria-controls="mobile-menu">
                 <svg width="32" height="22" class="hamburger-open">
                     <use href="./images/icons.svg#hamburger"/>
                 </svg>
@@ -329,30 +329,30 @@
             </div>
             <div class="footer-social">
                 <p class="socmed-p">Social media</p>
-                <ul class="socmed-footer">
-                    <li class="socmed-footer-list">
-                        <a href="" class="socmed-footer-link">
+                <ul class="socmed">
+                    <li class="socmed-list">
+                        <a href="" class="socmed-link">
                             <svg width="24" height="24" class="footer-icons">
                                 <use href="./images/icons.svg#instagram"/>
                             </svg>
                         </a>
                     </li>
-                    <li class="socmed-footer-list">
-                        <a href="" class="socmed-footer-link">
+                    <li class="socmed-list">
+                        <a href="" class="socmed-link">
                             <svg width="24" height="24" class="footer-icons">
                                 <use href="./images/icons.svg#twitter"/>
                             </svg>
                         </a>
                     </li>
-                    <li class="socmed-footer-list">
-                        <a href="" class="socmed-footer-link">
+                    <li class="socmed-list">
+                        <a href="" class="socmed-link">
                             <svg width="24" height="24" class="footer-icons">
                                 <use href="./images/icons.svg#facebook"/>
                             </svg>
                         </a>
                     </li>
-                    <li class="socmed-footer-list">
-                        <a href="" class="socmed-footer-link">
+                    <li class="socmed-list">
+                        <a href="" class="socmed-link">
                             <svg width="24" height="24" class="footer-icons">
                                 <use href="./images/icons.svg#linkedin"/>
                             </svg>
@@ -378,7 +378,7 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal-window">
-            <button class="close" type="button" data-modal-close>
+            <button class="modal-close" type="button" data-modal-close>
                 <svg width="8" height="8" class="close-icon">
                     <use href="./images/icons.svg#cross"/>
                 </svg>
@@ -431,60 +431,62 @@
             </form>
         </div>
     </div>
-    <div class="menu-container js-menu-container is-open" id="mobile-menu">
+    <div class="menu-container js-menu-container" id="mobile-menu">
         <button class="js-close-menu close" type="button">
             <svg width="8" height="8" class="close-icon">
                 <use href="./images/icons.svg#cross"/>
             </svg>
         </button>
         <div class="menu">
-            <ul class="list navlist">
-                <li class="list-item active-nav"><a href="./index.html" class="active-link link">Studio</a></li>
-                <li class="list-item"><a href="./portfolio.html" class="link">Portfolio</a></li>
-                <li class="list-item"><a href="" class="link">Contacts</a></li>
+            <nav class="menu-navlist">
+                <ul class="list">
+                    <li class="list-item active-nav"><a href="./index.html" class="active-link link">Studio</a></li>
+                    <li class="list-item"><a href="./portfolio.html" class="link">Portfolio</a></li>
+                    <li class="list-item"><a href="" class="link">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="menu-separator">
+                <address class="menu-contactlist">
+                <ul class="list contactlist">
+                    <li class="list-item">
+                        <a href="tel:+110001111111" class="link tel">+11 (000) 111-11-11</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="mailto:info@devstudio.com" class="link email">info@devstudio.com</a>
+                    </li>
+                </ul>
+            </address>
+            <ul class="socmed">
+                <li class="socmed-list">
+                    <a href="" class="socmed-link">
+                        <svg width="24" height="24" class="footer-icons">
+                            <use href="./images/icons.svg#instagram"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socmed-list">
+                    <a href="" class="socmed-link">
+                        <svg width="24" height="24" class="footer-icons">
+                            <use href="./images/icons.svg#twitter"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socmed-list">
+                    <a href="" class="socmed-link">
+                        <svg width="24" height="24" class="footer-icons">
+                            <use href="./images/icons.svg#facebook"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socmed-list">
+                    <a href="" class="socmed-link">
+                        <svg width="24" height="24" class="footer-icons">
+                            <use href="./images/icons.svg#linkedin"/>
+                        </svg>
+                    </a>
+                </li>
             </ul>
-        <address class="menu-contact">
-            <ul class="list contactlist">
-                <li class="list-item">
-                    <a href="tel:+110001111111" class="link">+11 (000) 111-11-11</a>
-                </li>
-                <li class="list-item">
-                    <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
-                </li>
-                <li>
-                    <ul class="socmed-footer">
-                        <li class="socmed-footer-list">
-                            <a href="" class="socmed-footer-link">
-                                <svg width="24" height="24" class="footer-icons">
-                                    <use href="./images/icons.svg#instagram"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="socmed-footer-list">
-                            <a href="" class="socmed-footer-link">
-                                <svg width="24" height="24" class="footer-icons">
-                                    <use href="./images/icons.svg#twitter"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="socmed-footer-list">
-                            <a href="" class="socmed-footer-link">
-                                <svg width="24" height="24" class="footer-icons">
-                                    <use href="./images/icons.svg#facebook"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="socmed-footer-list">
-                            <a href="" class="socmed-footer-link">
-                                <svg width="24" height="24" class="footer-icons">
-                                    <use href="./images/icons.svg#linkedin"/>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </address>
+            </div>
         </div>
     </div>
     <script src="./js/modal.js"></script>
