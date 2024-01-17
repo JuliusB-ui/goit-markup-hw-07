@@ -25,6 +25,19 @@
 .section {
     padding: 120px 0px;
 }
+
+.section:not(.hero-section) .container {
+    max-width: 1128px;
+}
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+    margin-bottom: 72px;
 }
 
 /* default font */
@@ -354,8 +367,207 @@ img {
 }
 
 /* HERO SECTION */
+.hero-section {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70),rgba(46, 47, 66, 0.70)), url(../images/hero-mob-x1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: unset;
+    padding: 112px 0;
+}
 
 
+.hero-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    margin-bottom: 72px;
+}
+
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2),
+    (min-resolution: 1920dpi),
+    (min-resolution: 10dppx) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.70),rgba(46, 47, 66, 0.70)), url(../images/hero-mob-x2.jpg);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.70),rgba(46, 47, 66, 0.70)), url(../images/hero-tab-x1.jpg);
+    }
+
+    .hero-title {
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 1.07;
+        letter-spacing: 1.12px;
+        margin-bottom: 36px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157px) and (min-device-pixel-ratio: 2),
+(min-resolution: 1920dpi),
+(min-resolution: 10dppx) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.70),rgba(46, 47, 66, 0.70)), url(../images/hero-tab-x2.jpg);
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.70),rgba(46, 47, 66, 0.70)), url(../images/hero-desk-x1.jpg);
+    }
+    .hero-title {
+        margin-bottom: 48px;
+    }
+}
+
+@media screen and (min-width: 1158px) and (min-device-pixel-ratio: 2),
+(min-resolution: 1920dpi),
+(min-resolution: 10dppx){
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.70),rgba(46, 47, 66, 0.70)), url(../images/hero-desk-x2.jpg);
+    }
+}
+
+.hero-button {
+    display: block;
+    align-items: center;
+    margin: 0 auto;
+    padding: 16px 32px;
+    background-color: var(--iris);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.64px;
+}
+
+
+/* STWO */
+.section.section-two{
+    padding: 96px 0 48px 0;
+}
+
+.stwo-container {
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.stwo-container .list {
+    display: flex;
+    gap: 24px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.stwo-div{
+    background-color: var(--cloud);
+    height: 112px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    display: none;
+}
+
+.selection .item-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+    color: var(--navy)
+}
+
+.selection-p {
+    font-weight: 500;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+    .stwo-container .list {
+        gap: 88px 24px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .selection .item-title {
+        justify-content: flex-start;
+    }
+    
+    .selection {
+        width: calc((100% - 24px) / 2);
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .stwo-container {
+        padding: 0;
+    }
+
+    .stwo-div {
+        display: flex;
+    }
+
+    .selection {
+        width: calc((100% - 72px) / 4);
+    }
+
+    .item-title {
+        margin-bottom: 8px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.4px;
+        text-transform: none;
+        color: var(--navy)
+    }
+
+    .selection-p {
+        font-weight: 400;
+    }
+
+}
+
+.section-three {
+    display: none;
+}
+
+@media screen and (min-width: 1158px) {
+    .section-three{
+        display:flex;
+}
+
+    .sthree-container {
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+
+    .sthree-container .list{
+        display: flex;
+        gap: 24px;
+    }
+
+
+    .wwd {
+        width: calc((100% - 48) / 3);
+    }
+}
 
 
 .team-socmed{
