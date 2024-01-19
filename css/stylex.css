@@ -82,18 +82,14 @@ body {
 }
 
 /* ocean pseudo-class color */
-.link:active,
-.link:hover,
-.link:focus, 
 .nav .link:active,
 .nav .link:hover,
 .nav .link:focus, 
 .contacts .link:active,
 .contacts .link:hover,
 .contacts .link:focus,
-.footer .link:active,
-.footer .link:hover,
-.footer .link:focus,
+.separate-nav .link:focus,
+.separate-nav .link:hover,
 .menu-navlist .list-item .link:focus,
 .menu-navlist .list-item .link:hover {
     color: var(--ocean);
@@ -476,6 +472,13 @@ img {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.64px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-button:hover,
+.hero-button:active, .hero-button:focus {
+    background-color: var(--ocean);
+    color: #FFFFFF ;
 }
 
 
@@ -672,6 +675,7 @@ img {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    padding: 0 16px;
 }
 
 .client-lists {
@@ -688,9 +692,13 @@ img {
     width: calc((100% - 24px) / 2);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width:1157px) {
 .client-list {
     width: calc((100% - 48px) / 3);
+}
+
+.sfive-container {
+    padding: 0 108px;
 }
 }
 
@@ -734,27 +742,24 @@ img {
 
 .footer-div {
     display: flex;
-    justify-content: center;
     align-items: center;
     padding: 100px 0;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+    justify-content: center;
 }
 
-.footer-text-container {
-    margin-right: 120px;
-}
 .footer .logo,
 .socmed-p,
 .newsletter-p {
-    margin-bottom: 16px;
-}
-
-.footer-social {
-    margin-right: 80px;
+    padding-bottom: 16px;
 }
 
 .footer-socmed {
     gap:16px;
 }
+
 
 .socmed-p,
 .newsletter-p,
@@ -769,6 +774,7 @@ img {
     gap: 24px;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .nl-input {
@@ -807,4 +813,41 @@ img {
 
 .subscribe-icon {
     margin-left: 16px;
+}
+
+.footer-text-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+@media screen and (max-width: 767px) {
+    .socmed-p,
+    .footer .logo, 
+    .newsletter-p {
+        text-align: center;
+    }
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+    .footer-div {
+        justify-content: flex-start;
+        padding: 100px 108px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+.footer-div {
+    gap: 0;
+}
+.footer-text-container {
+    margin-right: 120px;
+}
+
+.footer-social {
+    margin-right: 80px;
+}
 }
