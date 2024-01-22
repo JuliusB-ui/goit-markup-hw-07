@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/stylex.css"/>
+    <link rel="stylesheet" href="./css/styles.css"/>
 </head>
 <body>
     <header class="header">
@@ -376,9 +376,9 @@
             </div>
         </div>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal-window">
-            <button class="modal-close" type="button" data-modal-close>
+            <button class="close modal-close" type="button" data-modal-close>
                 <svg width="8" height="8" class="close-icon">
                     <use href="./images/icons.svg#cross"/>
                 </svg>
@@ -412,7 +412,7 @@
                         </svg>
                     </div>
                 </div>
-                <div class=" comment-div">
+                <div class="comment-div">
                     <label class="form-label" for="user-comment">Comment</label>
                     <textarea id="user-comment" name="user-comment" placeholder="Text input" class="usercomment"></textarea>
                 </div>
